@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FirstDoor
+  - SecondDoor
+  - ThirdDoor
+  - FourthDoor
+  - FifthDoor
+  - SixthDoor
+  - Item
   layers:
   - Default
   - TransparentFX

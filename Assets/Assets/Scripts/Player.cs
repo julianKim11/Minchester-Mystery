@@ -10,21 +10,93 @@ public class Player : MonoBehaviour
     [Range(0, 0.3f)] [SerializeField] private float suavidadDeMovimiento;
     private Vector3 velocidad = Vector3.zero;
     private Rigidbody2D rb2D;
+    public MainCamera mainCamera;
+    public bool isDoorOpen = false;
+    //public bool isMoving = false;
 
+    private bool firstDoor = false;
+    private bool secondDoor = false;
+    private bool thirdDoor = false;
+    private bool fourthDoor = false;
+    private bool fifthDoor = false;
+    private bool sixthDoor = false;
+
+    private Vector3 newPlayerPosition;
+    private Transform newCameraPosition;
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        mainCamera = FindObjectOfType<MainCamera>();
     }
     private void Update()
     {
+        //if (!isMoving)
+        //{
+        //    movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
+        //}
         movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
     }
     private void FixedUpdate()
     {
+        //if (!isMoving)
+        //{
+        //    Mover(movimientoHorizontal * Time.fixedDeltaTime);
+        //}
         Mover(movimientoHorizontal * Time.fixedDeltaTime);
+        if (firstDoor)
+        {
+            transform.position += new Vector3(6f, 0f, 0f);
+            mainCamera.ChangeCameraPosition(mainCamera.livingRoomCameraPosition);
+            firstDoor = false;
+        }
+        if (secondDoor)
+        {
+            transform.position += new Vector3(-6f, 0f, 0f);
+            mainCamera.ChangeCameraPosition(mainCamera.outsideCameraPosition);
+            secondDoor = false;
+        }
+        if (thirdDoor)
+        {
+            transform.position += new Vector3(3f, 0f, 0f);
+            mainCamera.ChangeCameraPosition(mainCamera.kitchenCameraPosition);
+            thirdDoor = false;
+        }
+        if (fourthDoor)
+        {
+            transform.position += new Vector3(-3f, 0f, 0f);
+            mainCamera.ChangeCameraPosition(mainCamera.livingRoomCameraPosition);
+            fourthDoor = false;
+        }
+        if (fifthDoor)
+        {
+            transform.position += new Vector3(3f, 0f, 0f);
+            mainCamera.ChangeCameraPosition(mainCamera.patioCameraPosition);
+            fifthDoor = false;
+        }
+        if (sixthDoor)
+        {
+            transform.position += new Vector3(-3f, 0f, 0f);
+            mainCamera.ChangeCameraPosition(mainCamera.kitchenCameraPosition);
+            sixthDoor = false;
+        }
+
     }
     private void Mover(float mover)
     {
+        //if (!isMoving)
+        //{
+        //    Vector3 velocidadObjetivo = new Vector2(mover, rb2D.velocity.y);
+        //    rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavidadDeMovimiento);
+
+        //    if (mover > 0 && !mirandoDerecha)
+        //    {
+        //        Girar();
+        //    }
+        //    else if (mover < 0 && mirandoDerecha)
+        //    {
+        //        Girar();
+        //    }
+        //}
         Vector3 velocidadObjetivo = new Vector2(mover, rb2D.velocity.y);
         rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavidadDeMovimiento);
 
@@ -36,7 +108,6 @@ public class Player : MonoBehaviour
         {
             Girar();
         }
-
     }
     public void Girar()
     {
@@ -44,5 +115,32 @@ public class Player : MonoBehaviour
         Vector3 escala = transform.localScale;
         escala.x *= -1;
         transform.localScale = escala;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if (collision.CompareTag("FirstDoor"))
+        //{
+        //    firstDoor = true;
+        //}
+        //if (collision.CompareTag("SecondDoor"))
+        //{
+        //    secondDoor = true;
+        //}
+        //if (collision.CompareTag("ThirdDoor"))
+        //{
+        //    thirdDoor = true;
+        //}
+        //if (collision.CompareTag("FourthDoor"))
+        //{
+        //    fourthDoor = true;
+        //}
+        //if (collision.CompareTag("FifthDoor"))
+        //{
+        //    fifthDoor = true;
+        //}
+        //if (collision.CompareTag("SixthDoor"))
+        //{
+        //    sixthDoor = true;
+        //}
     }
 }
