@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Slot : MonoBehaviour/*, IPointerClickHandler*/
+public class Slot : MonoBehaviour, IPointerClickHandler
 {
     public GameObject item;
     public int ID;
@@ -22,12 +22,13 @@ public class Slot : MonoBehaviour/*, IPointerClickHandler*/
     {
         slotIconGameObject.GetComponent<Image>().sprite = icon;
     }
-    //public void UseItem()
-    //{
-    //    item.GetComponent<Item>().ItemUsage();
-    ////}
-    //public void OnPointerClick(PointerEventData pointerEventData)
-    //{
-    //    UseItem();
-    //}
+    public void UseItem()
+    {
+        item.GetComponent<Item>().ItemUsage();
+    }
+
+    public void OnPointerClick(PointerEventData pointerEventData)
+    {
+        UseItem();
+    }
 }

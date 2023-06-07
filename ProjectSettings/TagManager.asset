@@ -11,6 +11,7 @@ TagManager:
   - FifthDoor
   - SixthDoor
   - Item
+  - Boundary
   layers:
   - Default
   - TransparentFX

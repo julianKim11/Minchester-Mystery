@@ -8,12 +8,18 @@ public class Dialogue : MonoBehaviour
     private bool isPlayerInRange;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private GameObject alertPanel;
+    [SerializeField] private TMP_Text alertText;
     private GameObject dialogueMark;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    public int times = 0;
 
     private bool didDialogueStart;
     private int lineIndex;
     private float typingTime = 0.05f;
+
+    public Inventory inventory;
+    public Player player;
     void Update()
     {
         if (isPlayerInRange && Input.GetButtonDown("Fire1"))
@@ -54,7 +60,17 @@ public class Dialogue : MonoBehaviour
             dialoguePanel.SetActive(false);
             //dialogueMark.SetActive(true);
             Time.timeScale = 1f;
+
+            if (inventory.HasItem("placa"))
+            {
+                player.firstDoor = true;
+            }
         }
+    }
+    private IEnumerator WaitAndDisablePanel(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        alertPanel.SetActive(false);
     }
     private IEnumerator ShowLine()
     {

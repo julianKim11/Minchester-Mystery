@@ -64,11 +64,11 @@ public class Inventory : MonoBehaviour
 
         if(inventoryEnabled == true)
         {
-            inventory.SetActive(true);
+            inventory.SetActive(false);
         }
         else
         {
-            inventory.SetActive(false);
+            inventory.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,8 +101,21 @@ public class Inventory : MonoBehaviour
                 slot[i].GetComponent<Slot>().UpdateSlot();
 
                 slot[i].GetComponent<Slot>().empty = false;
+                break;
             }
-            return;
+            
         }
+    }
+    public bool HasItem(string itemType)
+    {
+        foreach (GameObject slot in slot)
+        {
+            Slot slotComponent = slot.GetComponent<Slot>();
+            if(!slotComponent.empty && slotComponent.type == itemType)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

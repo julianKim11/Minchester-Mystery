@@ -11,15 +11,18 @@ public class Player : MonoBehaviour
     private Vector3 velocidad = Vector3.zero;
     private Rigidbody2D rb2D;
     public MainCamera mainCamera;
-    public bool isDoorOpen = false;
+    //public bool isDoorOpen = false;
     //public bool isMoving = false;
 
-    private bool firstDoor = false;
-    private bool secondDoor = false;
-    private bool thirdDoor = false;
-    private bool fourthDoor = false;
-    private bool fifthDoor = false;
-    private bool sixthDoor = false;
+    public bool firstDoor = false;
+    public bool secondDoor = false;
+    public bool thirdDoor = false;
+    public bool fourthDoor = false;
+    public bool fifthDoor = false;
+    public bool sixthDoor = false;
+
+    public Inventory inventory;
+    public GameObject nota;
 
     private Vector3 newPlayerPosition;
     private Transform newCameraPosition;
@@ -79,7 +82,13 @@ public class Player : MonoBehaviour
             mainCamera.ChangeCameraPosition(mainCamera.kitchenCameraPosition);
             sixthDoor = false;
         }
-
+    }
+    public void Note()
+    {
+        if (inventory.HasItem("Nota"))
+        {
+            nota.SetActive(true);
+        }
     }
     private void Mover(float mover)
     {
@@ -116,31 +125,31 @@ public class Player : MonoBehaviour
         escala.x *= -1;
         transform.localScale = escala;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //if (collision.CompareTag("FirstDoor"))
-        //{
-        //    firstDoor = true;
-        //}
-        //if (collision.CompareTag("SecondDoor"))
-        //{
-        //    secondDoor = true;
-        //}
-        //if (collision.CompareTag("ThirdDoor"))
-        //{
-        //    thirdDoor = true;
-        //}
-        //if (collision.CompareTag("FourthDoor"))
-        //{
-        //    fourthDoor = true;
-        //}
-        //if (collision.CompareTag("FifthDoor"))
-        //{
-        //    fifthDoor = true;
-        //}
-        //if (collision.CompareTag("SixthDoor"))
-        //{
-        //    sixthDoor = true;
-        //}
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("FirstDoor"))
+    //    {
+    //        firstDoor = true;
+    //    }
+    //    if (collision.CompareTag("SecondDoor"))
+    //    {
+    //        secondDoor = true;
+    //    }
+    //    if (collision.CompareTag("ThirdDoor"))
+    //    {
+    //        thirdDoor = true;
+    //    }
+    //    if (collision.CompareTag("FourthDoor"))
+    //    {
+    //        fourthDoor = true;
+    //    }
+    //    if (collision.CompareTag("FifthDoor"))
+    //    {
+    //        fifthDoor = true;
+    //    }
+    //    if (collision.CompareTag("SixthDoor"))
+    //    {
+    //        sixthDoor = true;
+    //    }
+    //}
 }
