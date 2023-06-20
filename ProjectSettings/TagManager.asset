@@ -4,14 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FirstDoor
   - SecondDoor
   - ThirdDoor
   - FourthDoor
   - FifthDoor
   - SixthDoor
   - Item
-  - Boundary
   layers:
   - Default
   - TransparentFX
@@ -21,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Background
   - 
   - 
   - 
@@ -48,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI Layer
+    uniqueID: 3595024635
     locked: 0
