@@ -42,7 +42,10 @@ public class ClickMovement : MonoBehaviour
             Debug.Log("ItemCollected");
         }
         else
+        {
             gameManager.UpdateHintBox(item, player.GetComponentInChildren<SpriteRenderer>().flipX);
+        }
+        gameManager.CheckSpecialConditions(item, canGetItem);
         yield return null;
     }
 }
