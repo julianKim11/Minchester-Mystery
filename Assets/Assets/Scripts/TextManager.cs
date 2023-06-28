@@ -16,7 +16,7 @@ public class TextManager : MonoBehaviour
         while (currentIndex < texts.Length)
         {
             texts[currentIndex].gameObject.SetActive(true);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             texts[currentIndex].gameObject.SetActive(false);
             currentIndex++;
         }

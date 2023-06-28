@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 372d6367faafde443925d3163fce9594
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6798447383460680710
+    second: Obj_en_Inventario_0
+  - first:
+      213: -7373552088285387043
+    second: Obj_en_Inventario_1
+  - first:
+      213: -5266574906134267742
+    second: Obj_en_Inventario_2
+  - first:
+      213: 5470917208862009860
+    second: Obj_en_Inventario_3
+  - first:
+      213: 3922745941720180180
+    second: Obj_en_Inventario_4
+  - first:
+      213: -368457315807836090
+    second: Obj_en_Inventario_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +93,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Obj_en_Inventario_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244
+        width: 318
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6049b5320efe85e50800000000000000
+      internalID: 6798447383460680710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obj_en_Inventario_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 185
+        width: 469
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6e8e44171eba990800000000000000
+      internalID: -7373552088285387043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obj_en_Inventario_2
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 206
+        width: 296
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a871e0c60e59e6b0800000000000000
+      internalID: -5266574906134267742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obj_en_Inventario_3
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 182
+        width: 295
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40aaacd173a9ceb40800000000000000
+      internalID: 5470917208862009860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obj_en_Inventario_4
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 173
+        width: 652
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5265086a4607630800000000000000
+      internalID: 3922745941720180180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obj_en_Inventario_5
+      rect:
+        serializedVersion: 2
+        x: 3652
+        y: 0
+        width: 436
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6484160060af2eaf0800000000000000
+      internalID: -368457315807836090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
